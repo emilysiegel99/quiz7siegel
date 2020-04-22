@@ -13,7 +13,7 @@
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    crossorigin=""></script>
 
-   <script src = "./mydata/boshamerstadium.geojson"></script>
+   <script src = "./data/boshamerstadium.geojson"></script>
    
   <style type="text/css">
     body {
@@ -57,21 +57,22 @@
 
  //L.geoJSON(boshamerstadium).addTo(map)
 
- var uncIcon = L.icon({
-   iconURL: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Baseball_%28crop%29.jpg/1280px-Baseball_%28crop%29.jpg',
-    iconSize: [50,50],
-    popupAnchor: [0,0]
- });
+ var uncIcon = L.icon({ 
+        iconUrl: 'http://compositebats.com/wp-content/uploads/2013/07/baseball.jpg',
+        iconSize: [50,50], 
+        popupAnchor: [0,0]
+        });
 
- var customPopup = "Boshamer Stadium<br/><img src='https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Baseball_%28crop%29.jpg/1280px-Baseball_%28crop%29.jpg'width='100px'/>";
- 
- L.geoJSON(boshamerstadium, { 
-pointToLayer: function (feature, latlng) {
-return L.marker(latlng, {icon: uncIcon});}}) 
-.bindPopup(customPopup) 
-.addTo(map); 
+        var customPopup = "Boshamer Stadium<br/><img src='https://i.pinimg.com/originals/9d/fe/10/9dfe1057c44560d84567ee10105bb81b.png'width='100px'/>";
+
+        L.geoJSON(boshamerstadium, {
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {icon: uncIcon});}}) 
+        .bindPopup(customPopup) 
+        .addTo(map); 
 
   </script>
+
 </body>
 </html>
 
